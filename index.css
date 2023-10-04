@@ -387,6 +387,7 @@ p {
 .hero {
     display: flex;
     width: 100%;
+    height: 90vh;
     justify-content: center;
 }
 
@@ -415,6 +416,49 @@ p {
     max-width: 480px;
 }
 
+/*PARTNERS GRID SECTION*/
+.partners-section-grid {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+}
+
+.grid-section {
+    display: grid;
+    grid-template-columns: auto auto auto auto;
+    background-color: white;
+    gap: var(--spacing-lg) var(--spacing-md);
+    margin: 20px 0 40px 0;
+}
+
+.grid-section>img {
+    height: 60px;
+    place-self: center;
+}
+
+/*DISCRIPTION PLATFROM SECTION*/
+.description-platform {
+    padding: var(--spacing-xl) 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--bg-light);
+}
+
+.description-platform h2 {
+    width: 50%;
+    margin-bottom: var(--spacing-md);
+}
+
+.description-platform .primary-button {
+    background-color: var(--purple-2);
+    margin: var(--spacing-md) 0;
+}
+
+.description-platform .primary-button:hover {
+    background-color: var(--primary-accent);
+}
+
 
 
 /*TEMPORARY */ 
@@ -426,40 +470,88 @@ body {
 
 
 /*RESPONSIVE*/
+@media only screen and (max-width: 1164px) {
+    .section-container {
+        padding: 0 var(--spacing-md);
+    }
+}
 @media only screen and (max-width: 900px) {
-    /* HERO SECTION*/
-    .hero .hero-left h1 {
-        
+}
+
+@media only screen and (max-width: 885px) {
+    :root {
+        --h1-size: 64px;
+        --h1-height: 72px;
+    }
+    /*HERO SECTION*/
+    .hero {
+        height: 70vh;
+    }
+    .hero-phone {
+        height: 468px;
+        transform: translate(32px, -42px);
+    }
+    .two-column .hero-phone-container {
+        justify-content: flex-start;
+    }
+    /* GRID-SECTION */
+    .grid-section>img {
+        height: auto;
+        width: 100%;
+    }
+    /* DESCRIPTION - SECTION */
+    .description-platform h2 {
+        width: 85%;
     }
 }
 
 @media only screen and (max-width: 800px) {
     /* HERO SECTION*/
-    .hero-phone {
-        height: 468px;
-        transform: translate(32px, -42px);
-    }
-
-    .two-column .hero-phone-container {
-        justify-content: flex-start;
-    }
 }
 
 @media only screen and (max-width: 769px) {
-    /*HERO*/
-    .hero-phone-container > .hero-phone {
-        display: none;
-    }
-    .navbar > button,.center-navbar {
+    /*NAVBAR*/
+    .navbar>button,
+    .center-navbar {
         display: none;
     }
     .hamburger-button {
         display: flex;
+    }
+    /*HERO*/
+    .hero {
+        height: 60vh;
+    }
+    .hero .col-right {
+        display: none;
+    }
+    .hero .col-left {
+        width: 90%;
     }
 }
 
 @media only screen and (min-width: 769px) {
     .mobile-nav {
         display: none;
+    }
+}
+
+@media only screen and (max-width: 550px) {
+    /* DESCRIPTION-SECTION */
+    .description-platform {
+        padding: var(--spacing-md) 0;
+    }
+
+    .description-platform .two-column {
+        flex-direction: column;
+    }
+
+    .description-platform .col-left {
+        width: 100%;
+    }
+
+    .description-platform .col-right {
+        width: 100%;
+        padding: 0;
     }
 }
