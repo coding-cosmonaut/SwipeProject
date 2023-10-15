@@ -503,6 +503,79 @@ p {
     border-radius: 30px;
 }
 
+/* ENGINEER-SECTION */
+.engineer-section {
+    margin: var(--spacing-xl) 0;
+    color: white;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    position: relative;
+    padding: calc(var(--spacing-xl) *2.5) 0;
+    z-index: 1;
+}
+
+.engineer-section::before {
+    content: '';
+    width: 100%;
+    height: 1100px;
+    background-color: var(--primary-accent);
+    position: absolute;
+    bottom: -100px;
+    left: 0;
+    z-index: -1;
+    transform: skewY(-10deg);
+}
+
+.engineer-section::after {
+    content: '';
+    background-color: var(--bg-light);
+    width: 100%;
+    height: 50%;
+    position: absolute;
+    top: -69px;
+    right: 0;
+    z-index: -2;
+}
+
+.engineer-section .card-container {
+    display: flex;
+    margin: var(--spacing-lg) 0 0 0;
+}
+
+.engineer-section .card-container .card {
+    width: 50%;
+}
+
+.engineer-section .col-left>button {
+    background-color: var(--blue-1);
+    color: black;
+}
+
+.engineer-section .col-left>button:hover {
+    background-color: var(--bg-white);
+}
+
+.engineer-section .col-right {
+    height: 550px;
+    justify-content: flex-start;
+}
+
+.engineer-section .col-right img {
+    width: 85%;
+    height: 53%;
+    margin: var(--spacing-md) 0 0 0;
+    border-radius: 20px;
+}
+
+.engineer-section .card-container button {
+    color: var(--blue-1)
+}
+
+.engineer-p {
+    width: 88%;
+}
+
 
 
 /*TEMPORARY */ 
@@ -547,10 +620,18 @@ body {
     .description-platform h2 {
         width: 85%;
     }
+    /* ENGINEER SECTION */
+    .engineer-section .col-right img {
+        width: 100%;
+        height: 70%;
+    }
 }
 
-@media only screen and (max-width: 800px) {
+@media only screen and (max-width: 803px) {
     /* HERO SECTION*/
+    .two-column .col-left {
+        width: 53%;
+    }
 }
 
 @media only screen and (max-width: 769px) {
@@ -564,13 +645,28 @@ body {
     }
     /*HERO*/
     .hero {
-        height: 60vh;
+        height: 65vh;
     }
     .hero .col-right {
         display: none;
     }
     .hero .col-left {
         width: 90%;
+    }
+    /*GRAPHICAL-GRID*/
+    .graphical-grid {
+        gap: var(--spacing-sm);
+    }
+    /* ENGINEER - SECTION */
+    .engineer-section::before {
+        height: 900px;
+        bottom: 40px;
+    }
+    .engineer-section .col-right {
+        display: none;
+    }
+    .engineer-section .col-left {
+        width: 85%;
     }
 }
 
@@ -597,5 +693,25 @@ body {
     .description-platform .col-right {
         width: 100%;
         padding: 0;
+    }
+}
+
+@media only screen and (max-width: 450px) {
+    /* ENGINEERING SECTION */
+    .engineer-section {
+        padding-top: 80px;
+    }
+
+    .engineer-section .card-container {
+        flex-direction: column;
+    }
+
+    .engineer-section .card-container .card {
+        width: 90%;
+    }
+
+    .engineer-section::before {
+        height: 1100px;
+        bottom: 40px;
     }
 }
