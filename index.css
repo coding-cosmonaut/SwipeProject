@@ -459,6 +459,50 @@ p {
     background-color: var(--primary-accent);
 }
 
+/*GRID-IMAGE-SECTION*/
+.graphic-section {
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    background-color: var(--bg-light);
+}
+
+.graphical-grid {
+    display: grid;
+    grid-template-areas:
+        'credit invoice invoice'
+        'phone invoice invoice'
+        'phone dash dash';
+    gap: var(--spacing-lg);
+    padding: var(--spacing-lg) 0;
+}
+
+.graphical-grid>img {
+    width: 100%;
+}
+
+#img-1 {
+    grid-area: credit;
+    box-shadow: var(--standard-box-shadow);
+    border-radius: 20px;
+}
+
+#img-2 {
+    grid-area: invoice;
+    box-shadow: var(--standard-box-shadow);
+    border-radius: 30px;
+}
+
+#img-3 {
+    grid-area: phone;
+}
+
+#img-4 {
+    grid-area: dash;
+    box-shadow: var(--standard-box-shadow);
+    border-radius: 30px;
+}
+
 
 
 /*TEMPORARY */ 
