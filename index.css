@@ -59,6 +59,7 @@ body {
     justify-content: center;
     flex-direction: column;
     align-items: center;
+    overflow: hidden;
 }
 
 main {
@@ -576,6 +577,34 @@ p {
     width: 88%;
 }
 
+/* WHY SWIPE SECTION */
+.why-swipe-section {
+    margin: calc(var(--spacing-xl) * 2.5) 0;
+    display: flex;
+    width: 100%;
+    justify-content: center;
+    padding: calc(var(--spacing-xl)*2) 0;
+}
+
+.why-swipe-section h2 {
+    margin: 0 0 var(--spacing-lg) 0;
+}
+
+.why-swipe-section .card-container {
+    display: flex;
+    width: 100%;
+}
+
+.why-swipe-section .card-container .card {
+    width: 25%;
+    padding: 0 var(--spacing-sm) 0 0;
+    margin: 0 var(--spacing-md) 0 0;
+    box-sizing: border-box;
+}
+
+.why-swipe-section .secondary-text {
+    color: var(--text-dark);
+}
 
 
 /*TEMPORARY */ 
@@ -668,6 +697,18 @@ body {
     .engineer-section .col-left {
         width: 85%;
     }
+    /* WHY-SWIPE SECTION */
+    .why-swipe-section {
+        padding-top: 0;
+        margin-top: var(--spacing-xl);
+    }
+    .why-swipe-section .card-container {
+        flex-wrap: wrap;
+    }
+    .why-swipe-section .card-container .card {
+        width: 50%;
+        margin: var(--spacing-sm) 0;
+    }
 }
 
 @media only screen and (min-width: 769px) {
@@ -693,6 +734,11 @@ body {
     .description-platform .col-right {
         width: 100%;
         padding: 0;
+    }
+    /* WHY SWIPE SECTION */
+    .why-swipe-section .card-container .card {
+        width: 100%;
+        margin: 0;
     }
 }
 
