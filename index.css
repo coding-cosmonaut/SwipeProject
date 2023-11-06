@@ -797,6 +797,43 @@ p {
     z-index: 1;
 }
 
+/* WAITING FOR SECTION - SIGN UP */
+
+.waiting-for-section {
+    display: flex;
+    justify-content: center;
+    padding: var(--spacing-xl) 0;
+}
+
+.waiting-for-section .col-left p {
+    width: 88%;
+}
+
+.waiting-for-section .card-container {
+    display: flex;
+}
+
+.waiting-for-section .card {
+    width: 50%;
+    box-sizing: border-box;
+    padding: 0 var(--spacing-sm) 0 0;
+    margin: 0 var(--spacing-sm) 0 0;
+}
+
+.waiting-for-section .primary-button {
+    background-color: var(--purple-2);
+    margin: var(--spacing-md) 0 0 0;
+}
+
+.waiting-for-section .primary-button:hover {
+    background-color: var(--primary-accent);
+}
+
+.waiting-for-section .secondary-button {
+    padding-left: 0;
+    color: var(--purple-2);
+}
+
 
 /*TEMPORARY */ 
 /* body {
@@ -934,6 +971,16 @@ p {
         flex-wrap: wrap;
         margin: var(--spacing-md) 0;
     }
+/* WAITING-FOR-SECTION */
+    .waiting-for-section .card-container {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .waiting-for-section .card-container .card {
+        width: 100%;
+        padding: 0 0 var(--spacing-lg) 0;
+    }
 }
 
 @media only screen and (min-width: 769px) {
@@ -1010,6 +1057,10 @@ p {
     .virtual-events-section .card-bottom .subtitle {
         margin-top: var(--spacing-xl);
     }
+/*WAITING FOR SECTION */
+    .waiting-for-section {
+        padding: 0;
+    }
 }
 
 @media only screen and (max-width: 450px) {
@@ -1033,5 +1084,27 @@ p {
 /* VIRTUAL-SECTION */
     .virtual-events-section .swipe-sessions-card {
         width: 330px;
+    }
+/*WAITING FOR SECTION */
+    .waiting-for-section {
+        padding: 0;
+    }
+
+    .waiting-for-section>.two-column {
+        flex-direction: column;
+        flex-wrap: wrap;
+    }
+
+    .waiting-for-section .col-left {
+        width: 100%;
+    }
+
+    .waiting-for-section .col-right {
+        width: 100%;
+        padding: 0;
+    }
+
+    .waiting-for-section .col-right .card-container {
+        padding: var(--spacing-lg) 0 0 0;
     }
 }
